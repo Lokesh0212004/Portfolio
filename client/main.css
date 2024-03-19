@@ -1,0 +1,403 @@
+@import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/facebook.css');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/instagram.css');
+*{
+margin: 0px;
+padding: 0px;
+}
+p{
+    color: white;
+}
+html{
+    scroll-behavior: smooth;
+}
+.dark{
+    background:linear-gradient(45deg,black,gray,black);
+}
+body{
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   overflow-x: hidden;
+    height: 100vh;
+    color: white;
+    background-image: url('bgimg22.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+nav{
+    font-size: clamp( 1rem,10px,2rem);
+    font-weight: bolder;
+    z-index: 10;
+    color: white;
+    background-color:rgb(53, 53, 53);
+    box-shadow: 2px 2px 10px #161616;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+    position: sticky;
+    top:0px;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+nav ul li{
+    transition: 2s;
+    display: inline-block;
+   border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    margin: 10px 10px;
+    padding: 10px;
+    transition: 100ms;
+    border: none;
+}
+.menu{
+    display: none;
+}
+nav ul li:hover{
+    transition: 400ms;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+}
+.header{
+    position: relative;
+    width: 100%;
+    height: 300px;
+  
+}
+.content{
+    margin-top:50px;
+    font-style: italic;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:90%;
+    height: fit-content;
+    left: 25px;
+    color: white;
+    animation: opacity 2s ease-in-out;
+
+ }
+ @keyframes opacity {
+    from{
+     
+        opacity: 0;
+    }
+    to{
+      
+          opacity: 1;
+    }
+    
+ }
+ .profile{
+    border: 4px solid white;
+    box-shadow: 5px 5px 25px white;    
+     margin-left:20px ;
+    border-radius: 50%;
+    width: 200px;
+    height:200px;
+    background:linear-gradient(45deg,purple,blue,purple);
+    
+ }
+ .outer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+     width:100%;
+    height:400px;
+   text-align: center;
+   
+ }
+
+ .certificates{
+    position: relative;
+    border: 4px solid black;
+    border-radius: 25px;
+   box-shadow: 10px 10px 10px gray;
+    margin: 50px;
+    height:250px;
+    width: 400px;
+   cursor: pointer;
+    overflow-x:auto;
+    scroll-snap-type: y mandatory;
+}
+ @keyframes fade {
+    to{
+     scale: 1; opacity: 1;
+    }
+    
+ }
+ .outer{
+    scale: .2; opacity: 0;
+    animation:fade linear forwards ;
+    animation-timeline: view();
+    animation-range: entry;
+ }
+ ::-webkit-scrollbar{
+    scroll-behavior: smooth;
+    width: 0px;
+   
+ }
+ .certificates img{
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    width: 100%;
+    height: 100%;
+}
+.content p:nth-child(1){
+    font-variant: small-caps;
+    font-size: 3rem;
+}
+.content p:nth-child(2){
+    font-size: 4rem;
+}
+.content p:nth-child(3){
+    font-size: 2rem;
+    font-variant: small-caps;
+}
+footer{
+    text-align: center;
+    width: 100%;
+    height: 200px;
+    background-color:rgb(53, 53, 53);
+    position: sticky;
+    top: 100%;
+    margin: 0px 0px;
+    box-shadow: -1px -1px 20px black;
+}
+
+.logo{
+    display: flex;
+    justify-content: space-evenly;
+}
+i{
+   height: 100%;
+   width: 100%;
+    cursor: pointer;
+    color:black;
+}
+.icons{
+    margin: 20px;
+    position: relative;
+    height: 40px;
+    width:40px;
+    border-radius: 50%;
+    background-color: white;
+    transition: 1s;
+  display: grid;
+  place-items: center;
+}
+.icons:hover i{
+color: white;
+}
+.icons:hover{
+    transform: scale(1.2);
+    background-color: black;
+    box-shadow: 2px 2px 10px white,-2px -2px 10px white;
+    cursor:pointer;
+}
+.skills{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+    height: fit-content;
+    width: 100%;
+}
+.skills img{
+      height: 100%;
+      width: 100%;
+      background-position: center;
+      
+}
+.box{
+    
+    margin: 20px;
+    height: 100px;
+    width: 100px;
+    scale: 0.8;
+    animation: glow 3s ease-in-out infinite;
+    filter:drop-shadow(-1px -1px 10px white);
+    transition: 1s;
+   }
+   @keyframes glow {
+
+    0%{
+        scale: 1;
+    }
+    50%{
+        scale: 0.8;
+    }
+    100%{
+        scale: 1;
+    }
+ 
+   }
+.box:hover{
+    cursor: pointer;
+    animation:shake 100ms linear;
+}
+@keyframes shake {
+    from{
+        transform: rotate(15deg);
+    }
+    to{
+        transform: rotate(-15deg);
+    }
+    
+}
+@media all and (max-width:800px){
+    *{
+        padding: 0px;
+        margin: 0px;
+    }
+ 
+
+    nav{
+        padding: 5px;
+        position: relative;
+        font-weight: bolder;
+        z-index: 10;
+        color: white;
+        background-color:rgb(53, 53, 53);
+        box-shadow: 2px 2px 20px gray;
+        width: 102%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: baseline;
+        position: sticky;
+        top:0px;
+       
+    }
+    .menu{
+        position: absolute;
+        top:5px;
+        right:30px;
+         display: grid;
+         place-items: center;
+         height: 30px;
+         width: 40px;
+         background-color: transparent;
+         cursor: pointer;
+     }
+     .hidden{
+        display: none;
+     }
+     .active{
+        display: block;
+     }
+     .menu:hover{
+        border-radius: 5px;
+        background-color: white;
+     }
+     .menu:hover .line{
+        background-color: black;
+     }
+     .line{
+         height:3px;
+         width: 30px;
+         background-color: white;
+     }
+    nav ul li{
+        
+        display: block;
+        margin-top: 20px;
+        text-align: center;
+        cursor: pointer;
+        padding: 10px;
+        transition: 100ms;
+        border: none;
+    }
+    .profile{
+        border: 4px solid white;
+        box-shadow: 5px 5px 25px white;  
+         border-left: 4px solid white; border-right: 4px solid black;border-bottom: 4px solid black;
+        margin-left:20px ;
+        border-radius: 50%;
+        width: 100px;
+        height:100px;
+        background:linear-gradient(45deg,purple,blue,purple);
+        
+     }
+   
+.certificates{
+    position: relative;
+    border-radius: 25px;
+    margin: 50px;
+    height:180px;
+    width: 280px;
+    animation: change 1s linear infinite;
+    overflow-x:auto;
+    }
+    ::-webkit-scrollbar{
+        width: 0px;
+        z-index: -2;
+        height: 50px;
+       scroll-behavior: smooth;
+       border-radius: 20px;
+       
+     }
+     .certificates img{
+        width: 100%;
+        height: 100%;
+     }
+    
+    .content{
+        margin-top:50px;
+        font-style: italic;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width:90%;
+        height: fit-content;
+        left: 25px;
+        color: white;
+        animation: opacity 2s ease-in-out;
+    
+     }
+     .content p:nth-child(1){
+        font-variant: small-caps;
+        font-size:2rem;
+    }
+    .content p:nth-child(2){
+        font-size: 2.5rem;
+    }
+    .content p:nth-child(3){
+        font-size: 1rem;
+        font-weight: bolder;
+        font-variant: small-caps;
+    }
+    .header{
+        position: relative;
+        width: 100%;
+        height: 300px;
+    }
+    
+     nav ul{
+        width: 100%;
+    }
+    footer{
+        text-align: center;
+        width: 104%;
+        height: 200px;
+        background-color:rgb(53, 53, 53);
+        position: sticky;
+        top: 100%;
+        margin: 0px 0px;
+        box-shadow: -2px 2px 20px white;
+    }
+
+}
+
